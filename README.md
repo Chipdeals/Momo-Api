@@ -43,11 +43,9 @@
 
 </details>
 
+[Important Note](#important)
 
 ## Uses cases
-
-For all the request, you can check he error code [here](#error-codes) if an error occured
-
 
 ### Request payment
 
@@ -603,14 +601,20 @@ You can check status of the deposit [here](#get-status)
   **460 👉 ❌ Payer's payment account balance is low** <br/>
   **461 👉 ❌ An error occured while paying** <br/>
   **462 👉 ❌ This kind of transaction is not supported yet, processor not found** <br/>
-  **500 👉 ⛔️☠️ An unknow error occured on server** <br/>
+  **500 👉 ⛔️☠️ An unknow error occured on the api** <br/>
   **500 👉 ⛔️☠️ Transaction not Exists. Server error with payment service** <br/>
   **500 👉 ⛔️☠️ An undefined error occured** <br/>
-  **501 👉 ⛔️☠️🔔 An Error not registered occured on server. Call The dev Please** <br/>
+  **501 👉 ⛔️☠️🔔 A several error occured on the api. Call The dev Please** <br/>
   **504 👉 ⛔️☠️ Deposit is not available for the moment, try again later** <br/>
   <!-- **230 👉 🕟 Payment successfull, deposit pending** <br/> -->
   <!-- **502 👉 ⛔️☠️ No Available Amount On the server To Withdraw** <br/> -->
   <!-- **503 👉 ⛔️☠️ An error occured while deposit is processing after payment is successful** <br/> -->
+
+### IMPORTANT
+**There is some limitations when you are using your test api key and you should not ignore them**
+
+- Using test apikey have a rate limit of 10 requests per minute
+- With test apikey, the max amount you can request id 1. Any value over than 1 will be replaced by 1
     
     
 

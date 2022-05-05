@@ -14,9 +14,9 @@ Accept Payments in your node app.
 
 # Installation
 ```bash
-npm install chipdeals-momo-api --save
+npm install @chipdeals/momo-api --save
 # or
-yarn add chipdeals-momo-api
+yarn add @chipdeals/momo-api
 ```
 
 # Quick Start
@@ -24,7 +24,7 @@ yarn add chipdeals-momo-api
 **Initialize Chipdeals Momo API with your API Key ([*Get apikey here*](#)) and start**
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
 
 //Collect 500 XOF from the +229510150181 Mobile Money wallet.
@@ -58,7 +58,7 @@ The package needs to be configured with your **account's API key**, which is ava
 For example to request 2000 XOF from the ***+229510150181*** Mobile Money wallet, the following code can be used
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
 
 momo
@@ -111,7 +111,7 @@ momo
 You can also send 2000 XOF to the ***+229510150181*** Mobile Money wallet, with the following code
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
 
 momo
@@ -155,7 +155,7 @@ momo
 Get status of a transaction of reference `dd1e2d17-5c21-4964-b58d-198fd2aac150`
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
 
 const reference = "dd1e2d17-5c21-4964-b58d-198fd2aac150";
@@ -212,7 +212,7 @@ momo
 Get your Chipdeals account's balance
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
 
 momo
@@ -241,7 +241,7 @@ By default, logs are enabled for `test apiKey` and disabled for `live apiKey`.
 You can change the default setting like this
 
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 
 
 momo.setApiKey('test_FOdigzgSopV8GZggZa89'); //logs enable by default
@@ -426,7 +426,7 @@ To connect to user's wallet with test apiKey you must specify it when you initia
 
 #### Sample Initialize user wallet connection with test apiKey
 ```javascript=
-const momo = require('chipdeals-momo-api');
+const momo = require('@chipdeals/momo-api');
 momo.setApiKey(
   'test_FOdigzgSopV8GZggZa89',
   { enableTestRealWalletConnection: true }

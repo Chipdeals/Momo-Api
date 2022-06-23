@@ -1,8 +1,8 @@
-# Mobile Money API for [REST Http](https://github.com/Chipdeals/Momo-Api), and [Nodejs](https://github.com/Chipdeals/Momo-Api/blob/main/node-js.md)
+# Mobile Money [REST API](https://github.com/Chipdeals/Momo-Api), and [Nodejs Library](https://github.com/Chipdeals/Momo-Api/blob/main/node-js.md) documentation
 
-![Nodejs](https://img.shields.io/badge/rest_http-43853D?style=for-the-badge&logo=web&logoColor=white)
+![REST API](https://img.shields.io/badge/rest_api-43853D?style=for-the-badge&logo=web&logoColor=white)
 
-**Chipdeals-momo-api** is a Mobile Money API that allows you to build a quick, simple and excellent payment experience in your web and native app. This is the official **Doc for with http requests**
+**Chipdeals-momo-api** is a Mobile Money API that allows you to build a quick, simple and excellent payment experience in your web and native app. This is the official **Documentation for http requests**
 
 
 **You can [request payment](#Collect-Money) and [send money](#Disburse-Money) to any mobile money account**
@@ -15,8 +15,9 @@ No requirement
 
 # Installation
 
-You can use any tools that allow you to perform http requests.
-In this documentation, I will use curl, so I hope you have your terminal or another test tools to fast test all. (me i use [VSCode REST Client extention](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to check all quickly)
+You can use any tools that allows you to perform http requests. Like  [VSCode REST Client extention](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)<br/>
+
+I will be using curl, so I hope you have your terminal opened.
 
 <br/>
 
@@ -29,7 +30,7 @@ In this documentation, I will use curl, so I hope you have your terminal or anot
 curl --request POST 'https://apis.chipdeals.me/momo/requestpayment?apikey=test_FOdigzgSopV8GZggZa89' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "senderFirstName": "Jean",
+  "senderFirstName": "Willi Gate",
   "senderLastName": "EVERICH",
   "senderPhoneNumber": "22951945229",
   "amount": 10,
@@ -55,7 +56,7 @@ curl --request POST 'https://apis.chipdeals.me/momo/deposit?apikey=test_FOdigzgS
 # Usage
 
 #### Authentication
-You need to specify an apikey in all call you make to our API.
+You need to specify an apikey in any call made to our API.
 
 You specify you apikey with the query parametter ``apikey`` like in the folowing sample
 ```sh
@@ -71,7 +72,7 @@ curl 'https://chipdealsApiUrl?apikey=YOUR_API_KEY_HERE'
 
 
 ### Simple collection
-For example to request 2000 XOF from the ***+22951010591*** Mobile Money wallet, the following code can be used
+For example to request ***2000 XOF*** from the ***+22951010591*** Mobile Money wallet, the following code can be used
 
 ```sh
 curl --request POST 'https://apis.chipdeals.me/momo/requestpayment?apikey=test_FOdigzgSopV8GZggZa89' \
@@ -108,7 +109,7 @@ curl --request POST 'https://apis.chipdeals.me/momo/requestpayment?apikey=test_F
 
 ### Simple Disbursement
 
-You can also send 2000 XOF to the ***+22951010591*** Mobile Money wallet, with the following code
+You can also send ***2000 XOF*** to the ***+22951010591*** Mobile Money wallet, with the following code
 
 
 
@@ -141,7 +142,7 @@ curl --request POST 'https://apis.chipdeals.me/momo/deposit?apikey=test_FOdigzgS
 
 ## Get transaction status
 
-Get status of a transaction of reference `dd1e2d17-5c21-4964-b58d-198fd2aac150`
+Get status of a transaction with reference `dd1e2d17-5c21-4964-b58d-198fd2aac150`
 
 
 
@@ -340,9 +341,9 @@ Balance sample:
 </details>
 
 
-### Error codes
+### Error codes and their meaning
 
-This are error values that can be contained in property ``errorCode`` of a request which go an error
+These are the possible values of the property  ``errorCode``
 
 | Code    | message                                                       |
 | ------- | ------------------------------------------------------------- |
@@ -359,11 +360,11 @@ This are error values that can be contained in property ``errorCode`` of a reque
 | 400-111 | Parameter recipientPhoneNumber contain invalid data           |
 | 400-112 | Parameter senderPhoneNumber sent have bad operator            |
 | 400-113 | Parameter senderPhoneNumber sent have bad operator            |
-| 400-114 | Parameter senderPhoneNumber contain invalid data              |
-| 400-115 | Parameter senderPhoneNumber contain invalid data              |
+| 400-114 | Parameter senderPhoneNumber contains invalid data              |
+| 400-115 | Parameter senderPhoneNumber contains invalid data              |
 | 400-116 | Currency you enter in the request is not supported            |
 | 400-117 | Parameter currency not found in the request                   |
-| 400-118 | Parameter currency contain invalid data                       |
+| 400-118 | Parameter currency contains invalid data                       |
 | 401-100 | Incorrect api key in the request                              |
 | 404-100 | No transaction found with the reference in the request        |
 | 403-100 | Not enough money in your balance for a deposit                |
@@ -376,7 +377,7 @@ This are error values that can be contained in property ``errorCode`` of a reque
 
 # Webhook
 
-Webhooks are an important part of your payment integration. They allow Chipdeals notify you about events that happen on your account, such as a successful payment or a failed transaction.
+Webhooks are an important part of your payment integration. They allow us to notify you about events that happen on your account, such as a successful payment or a failed transaction.
 
 A ***webhook URL*** is an endpoint on your server where you can receive notifications about such events. When an event occurs, we'll make a ***POST*** request to that endpoint, with a ***JSON body*** containing the details about the event, including the type of event and the data associated with it.
 
@@ -459,7 +460,7 @@ Be sure to enable webhook retries on your dashboard. If we don't get a 200 statu
 
 # More Info
 
-## Collection and disburssement parametters
+## Collection and disbursement parameters
 
 ### - ``senderPhoneNumber`` or ``recipientPhoneNumber`` parameter
 
@@ -503,8 +504,8 @@ If  ``senderFirstName`` and ``senderLastName`` are not specified in collection r
 
 <br/>
 
-## Status Message Code
-#### You have here the values of the property ``statusMessageCode`` contained in [``transactionData`` Object](#transactionData)
+## Status Message Code and meaning
+#### Values and meaning of the property ``statusMessageCode`` contained in [``transactionData`` Object](#transactionData)
 
 | Code | Relative Status | Meaning                                                            |
 |:----:| --------------- | ------------------------------------------------------------------ |

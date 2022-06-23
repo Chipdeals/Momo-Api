@@ -85,7 +85,7 @@ curl --request POST 'https://apis.chipdeals.me/momo/requestpayment?apikey=test_F
 }'
 ```
 
-[Here are collection model of response you will get after collection request](#Collection-Responses-model)
+[Here are collection model of response you will get after collection request](#Each-Responses-model)
 
 ### Collect with a [webhook](#Webhook) to get response as soon as the payment is processed. 
 
@@ -122,7 +122,7 @@ curl --request POST 'https://apis.chipdeals.me/momo/deposit?apikey=test_FOdigzgS
 }'
 ```
 
-[Here are disbursement model of response you will get after disbursement request](#Disbursement-Responses-model)
+[Here are disbursement model of response you will get after disbursement request](#Each-Responses-model)
 
 ### Disburse with a [webhook](#Webhook) to get response as soon as the deposit is processed. 
 
@@ -148,8 +148,7 @@ Get status of a transaction of reference `dd1e2d17-5c21-4964-b58d-198fd2aac150`
 ```sh
 curl --request GET 'https://apis.chipdeals.me/momo/status/39022f7a-abd1-468f-a682-a6e2024d65b0?apikey=test_FOdigzgSopV8GZggZa89'
 ``` 
-[Here Collection transaction status sample](#Collection-transaction-status-model)
-[And Disbursement transaction status sample](#Disbursement-transaction-status-model)
+[Transaction respnoses sample](#Each-Responses-model)
 
 
 <br/>

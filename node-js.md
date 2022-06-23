@@ -1,4 +1,4 @@
-# Mobile Money API for [REST Http](https://github.com/Chipdeals/Momo-Api), and [Nodejs](https://github.com/Chipdeals/Momo-Api/blob/main/node-js.md)
+# Mobile Money [REST API](https://github.com/Chipdeals/Momo-Api), and [Nodejs Library](https://github.com/Chipdeals/Momo-Api/blob/main/node-js.md) documentation
 
 ![Nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
@@ -225,8 +225,7 @@ Get status of a transaction of reference `dd1e2d17-5c21-4964-b58d-198fd2aac150`
   style="width: 862px; height: 280px; border:0; transform: scale(1); overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe> -->
-<!-- 
-<!-- 
+
 ```javascript=
 const momo = require('@chipdeals/momo-api');
 momo.setApiKey('test_FOdigzgSopV8GZggZa89');
@@ -235,7 +234,7 @@ const reference = "dd1e2d17-5c21-4964-b58d-198fd2aac150";
 momo
   .status(reference)
   .then((transactionData)=>console.log(transactionData))
-``` --> -->
+``` 
 
 <details>
   <summary>Collection transactionData Sample </summary>

@@ -5,13 +5,6 @@
 **Chipdeals-momo-api** is a Mobile Money API that allows you to build a quick, simple and excellent payment experience in your web and native app. This is the official **Doc for with http requests**
 
 
-<div style="text-align: center">
-<img src="https://www.chipdeals.me/images/code.gif" alt="Fast integration" style="width:450px; border-radius: 5px 5px 0 0"/>
-    <br/>
-Accept Payments in your node app.
-</div>
-
-
 **You can [request payment](#Collect-Money) and [send money](#Disburse-Money) to any mobile money account**
 
 # Requirements

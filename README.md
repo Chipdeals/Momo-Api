@@ -330,7 +330,7 @@ Balance sample:
   {
     "success": true, //status of the request processing
     "message": "", //message of the request processing
-    "balance": [ //array of all balances by currency
+    "balances": [ //array of all balances by currency
       {
         "amount": 0, //amount
         "currency": "XOF" //balance 
